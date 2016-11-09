@@ -17,7 +17,7 @@
 <script type="text/javascript">
 </script>
 <body>
-	<div class="containerbox top">
+	<div class="containerbox">
 		<div class="container">
 			<div class="row column_box">
 				<div class="container" style="margin-top:40px">

@@ -1,5 +1,5 @@
 /* -------------------------------------------------------------------
-	共通
+	蜈ｱ騾�
 ------------------------------------------------------------------- */
 
 * {
@@ -26,7 +26,7 @@ body {
 
 .containerbox {
 	background:#f6f6f6;
-/* 	padding-top: 60px; */
+	padding-top: 50px;
 	padding-bottom: 30px;
 }
 
@@ -65,7 +65,7 @@ body {
 @media (max-width: 568px) {
   .containerbox {
     background:#f6f6f6;
-	padding-top: 530px;
+/* 	padding-top: 500px; */
 	padding-bottom: 30px;
   }
 }
@@ -94,4 +94,28 @@ a.underlinenone{
 
 .error {
 	border-color: red;
+}
+
+.wait_bg {
+	 position:fixed;
+	 z-index:1000;
+	 filter:alpha(opacity=50);
+	 background:#FFFFFF;
+	 opacity: 0.5;
+	 -moz-opacity: 0.5;
+	 left:0;
+	 top:0;
+	 height:100%;
+	 width:100%;
+}
+	    
+.wait_img {
+    margin: auto;
+    left: 50%;
+    position: absolute;
+    top: 50%;
+    width: 32px;
+    height:32px;
+    z-index: 1001;
+    background:url("../img/wait.gif");
 }

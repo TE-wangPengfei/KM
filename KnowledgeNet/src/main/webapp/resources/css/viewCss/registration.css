@@ -5,12 +5,8 @@ h2 {
   margin-bottom: 2px;
 }
 
-.top {
-	padding-top: 30px;
-}
-
-.container {
-	max-width: 420px;;
+.boxWidth {
+	max-width: 420px;
 	margin-top: 40px;
  }
 

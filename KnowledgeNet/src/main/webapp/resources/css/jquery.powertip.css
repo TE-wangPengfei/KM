@@ -1,0 +1,217 @@
+/* PowerTip Plugin */
+#powerTip1 {
+	cursor: default;
+	background-color: #ccc;
+	border: 2px solid #ccc;
+	box-shadow:rgba(0, 0, 0, 0.30) 0px 1px 2px 0px;
+	-webkit-box-shadow:rgba(0, 0, 0, 0.30) 0px 1px 2px 0px;
+	-moz-box-shadow:rgba(0, 0, 0, 0.30) 0px 1px 2px 0px;
+	border-radius: 3px;
+	color: #000000;
+	display: none;
+	padding: 0;
+	position: absolute;
+	z-index: 2147483647;
+	width:250px;
+}
+
+#powerTip2 {
+	cursor: default;
+	background-color: #3c5573;
+	border: 2px solid #3c5573;
+	box-shadow:rgba(0, 0, 0, 0.30) 0px 1px 2px 0px;
+	-webkit-box-shadow:rgba(0, 0, 0, 0.30) 0px 1px 2px 0px;
+	-moz-box-shadow:rgba(0, 0, 0, 0.30) 0px 1px 2px 0px;
+	border-radius: 3px;
+	color: #000000;
+	display: none;
+	padding: 0;
+	position: absolute;
+	z-index: 2147483647;
+	width:250px;
+}
+
+#powerTip3 {
+	cursor: default;
+	background-color: #3c5573;
+	border: 2px solid #3c5573;
+	box-shadow:rgba(0, 0, 0, 0.30) 0px 1px 2px 0px;
+	-webkit-box-shadow:rgba(0, 0, 0, 0.30) 0px 1px 2px 0px;
+	-moz-box-shadow:rgba(0, 0, 0, 0.30) 0px 1px 2px 0px;
+	border-radius: 3px;
+	color: #000000;
+	display: none;
+	padding: 0;
+	position: absolute;
+	z-index: 2147483647;
+	width:180px;
+}
+
+#powerTip1:before,
+#powerTip2:before,
+#powerTip3:before {
+	content: "";
+	position: absolute;
+}
+
+#powerTip1.se-alt:before {
+	border-top: 10px solid #ccc;
+	bottom: -10px;
+	border-left: 10px solid transparent;
+	border-right: 10px solid transparent;
+	left: 3px;
+}
+
+#powerTip1.se-alt:before {
+	border-top: none;
+	border-bottom: 10px solid #ccc;
+	bottom: auto;
+	top: -10px;
+}
+
+#powerTip1.se-alt:before {
+	left: auto;
+	right: 3px;
+}
+
+
+#powerTip2.sw-alt:before {
+	border-top: 10px solid #3c5573;
+	bottom: -10px;
+	border-left: 10px solid transparent;
+	border-right: 10px solid transparent;
+	left: 3px;
+}
+
+#powerTip2.sw-alt:before {
+	border-top: none;
+	border-bottom: 10px solid #3c5573;
+	bottom: auto;
+	top: -10px;
+}
+
+
+#powerTip3.se-alt:before {
+	bottom: -10px;
+	border-left: 10px solid transparent;
+	border-right: 10px solid transparent;
+	left: 3px;
+}
+
+#powerTip3.se-alt:before {
+	border-top: none;
+	bottom: auto;
+	top: -10px;
+}
+
+#powerTip3.se-alt:before {
+	left: auto;
+	right: 3px;
+}
+
+
+
+
+
+/*
+
+#powerTip.sw-alt:before, #powerTip.se-alt:before {
+	border-top: 10px solid #ccc;
+	bottom: -10px;
+	border-left: 10px solid transparent;
+	border-right: 10px solid transparent;
+	left: 3px;
+}
+
+#powerTip.sw-alt:before, #powerTip.se-alt:before {
+	border-top: none;
+	border-bottom: 10px solid #ccc;
+	bottom: auto;
+	top: -10px;
+}
+#powerTip.se-alt:before {
+	left: auto;
+	right: 3px;
+}
+
+*/
+
+
+
+/*
+#powerTip:before {
+	content: "";
+	position: absolute;
+}
+
+#powerTip.n:before, #powerTip.s:before {
+	border-right: 5px solid transparent;
+	border-left: 5px solid transparent;
+	left: 50%;
+	margin-left: -5px;
+}
+
+#powerTip.e:before, #powerTip.w:before {
+	border-bottom: 5px solid transparent;
+	border-top: 5px solid transparent;
+	margin-top: -5px;
+	top: 50%;
+}
+#powerTip.n:before {
+	border-top: 10px solid #ccc;
+	bottom: -10px;
+}
+#powerTip.e:before {
+	border-right: 10px solid #ccc;
+	left: -10px;
+}
+#powerTip.s:before {
+	border-bottom: 10px solid #ccc;
+	top: -10px;
+}
+#powerTip.w:before {
+	border-left: 10px solid #ccc;
+	right: -10px;
+}
+#powerTip.ne:before, #powerTip.se:before {
+	border-right: 10px solid transparent;
+	border-left: 0;
+	left: 10px;
+}
+#powerTip.nw:before, #powerTip.sw:before {
+	border-left: 10px solid transparent;
+	border-right: 0;
+	right: 10px;
+}
+#powerTip.ne:before, #powerTip.nw:before {
+	border-top: 10px solid #ccc;
+	bottom: -10px;
+}
+#powerTip.se:before, #powerTip.sw:before {
+	border-bottom: 10px solid #ccc;
+	top: -10px;
+}
+#powerTip.nw-alt:before, #powerTip.ne-alt:before,
+#powerTip.sw-alt:before, #powerTip.se-alt:before {
+	border-top: 10px solid #ccc;
+	bottom: -10px;
+	border-left: 10px solid transparent;
+	border-right: 10px solid transparent;
+	left: 3px;
+}
+#powerTip.ne-alt:before {
+	left: auto;
+	right: 10px;
+}
+#powerTip.sw-alt:before, #powerTip.se-alt:before {
+	border-top: none;
+	border-bottom: 10px solid #ccc;
+	bottom: auto;
+	top: -10px;
+}
+#powerTip.se-alt:before {
+	left: auto;
+	right: 3px;
+}
+*/
+

@@ -1,0 +1,105 @@
+/* =============================================================================
+	CSS
+============================================================================= */
+/* -------------------------------------------------------------------
+	共通
+------------------------------------------------------------------- */
+
+* {
+	margin:0;
+	padding:0;
+	font-size:14px;
+	border:none;
+	line-height:1.4em;
+	outline:none;
+	letter-spacing:0;
+	text-decoration:none;
+	color:#444;
+	font-family:'メイリオ',Meiryo,'ヒラギノ角ゴ Pro W3','Hiragino Kaku Gothic Pro','ＭＳ Ｐゴシック',Osaka,sans-serif;
+	-webkit-text-size-adjust: auto;
+}
+
+body {
+	padding:20px;
+	background:#f1f1f1;
+}
+
+.wrap {
+	margin:0 auto;
+	width:600px;
+	padding:20px;
+	background:#fff;
+}
+
+
+/* -------------------------------------------------------------------
+	float clearfix
+------------------------------------------------------------------- */
+.clearfix:after {
+	content:".";
+	display:block;
+	height:0;
+	clear:both;
+	visibility:hidden;
+}
+
+.clearfix {
+	display:inline-block;
+	min-height:1%;
+}
+
+/*\*/
+* html .clearfix {
+	height:1%;
+}
+
+.clearfix {
+	display:block;
+}
+/**/
+
+br.clear {
+	clear:both;
+	font-size:0;
+	line-height:0;
+}
+
+/* -------------------------------------------------------------------
+	コンテンツ
+------------------------------------------------------------------- */
+
+a {
+	text-decoration:underline;
+}
+
+a:hover {
+	text-decoration:none;
+}
+
+
+h1 {
+	font-size:16px;
+	background:#6682A2;
+	padding:10px;
+	color:#fff;
+}
+
+table {
+	border-collapse:collapse;
+	width:100%;
+}
+
+th,
+td {
+	padding:5px;
+}
+
+tr.color th,
+tr.color td {
+	background:#f5f5f5;
+}
+
+th {
+	width:30px;
+}
+

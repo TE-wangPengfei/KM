@@ -1,13 +1,15 @@
 package com.km.app;
 
 import javax.servlet.http.HttpServletRequest;
+import javax.validation.Valid;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.validation.BindingResult;
+import org.springframework.validation.annotation.Validated;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.km.model.RegistrationForm;
 
@@ -27,13 +29,27 @@ public class KM_LoginController {
 		return "registration";
 	}
 	
-	@ResponseBody
+//	@ResponseBody
+//	@RequestMapping(value = "createuser", method = RequestMethod.POST)
+//	public String createUser(@RequestBody RegistrationForm registrationForm,
+//			HttpServletRequest request, Model model) {
+//		System.out.println(registrationForm.getUserName());
+//		System.out.println(registrationForm.getEmail());
+//		System.out.println(registrationForm.getUserPassword());
+//		return "registration";
+//	}
+	
 	@RequestMapping(value = "createuser", method = RequestMethod.POST)
-	public String createUser(@RequestBody RegistrationForm registrationForm,
+	public String createUser(@ModelAttribute(value="registrationForm") @Valid RegistrationForm registrationForm,
+			BindingResult result,
 			HttpServletRequest request, Model model) {
+		if (result.hasErrors()) {
+			return "registration";
+		}
 		System.out.println(registrationForm.getUserName());
 		System.out.println(registrationForm.getEmail());
 		System.out.println(registrationForm.getUserPassword());
 		return "registration";
+		
 	}
 }

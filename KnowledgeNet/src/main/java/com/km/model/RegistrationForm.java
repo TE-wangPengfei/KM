@@ -1,8 +1,11 @@
 package com.km.model;
 
+import java.io.Serializable;
+
 import org.hibernate.validator.constraints.NotEmpty;
 
-public class RegistrationForm {
+public class RegistrationForm implements Serializable{
+	private static final long serialVersionUID = 1L;
 	@NotEmpty
 	private String userName;
 	

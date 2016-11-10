@@ -1,5 +1,3 @@
-﻿<%@ page language="java" contentType="text/html; charset=utf-8"%>
-
 <%@ page session="false"%>
 <%@ taglib prefix="spring" uri="http://www.springframework.org/tags"%>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
@@ -7,9 +5,8 @@
 <%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions"%>
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
 <!DOCTYPE HTML>
-<html lang="ja">
+<html>
 
-<meta http-equiv="X-UA-Compatible" content="IE=8" /> 
 <head>
 	<title>Registration</title>
 	<link href="/resources/css/viewCss/registration.css" rel="stylesheet" type="text/css" media="screen,print">
@@ -26,24 +23,28 @@
 						<strong> Create account</strong>
 					</div>
 					<div class="panel-body">
-						<form method="POST" role="form" name="registrationForm" id="registrationForm">
+						<form:form method="POST" action="/userMangement/createuser" name="registrationForm" id="registrationForm" modelAttribute="registrationForm">
 <%-- 							<input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}" /> --%>
 							<div id="errorMsg" style="display: none;"></div>
 							<div class="form-group">
 								<label class="control-label" for="userName">User name</label>
 								<input id="userName" name="userName" maxlength="50" placeholder="Username" class="form-control required"/>
+								<form:errors path="userName" cssClass="validateError"/>
 							</div>
 							<div class="form-group">
 								<label class="control-label" for="email">Email</label>
 								<input id="email" name="email" type="email"  placeholder="email" maxlength="50" class="form-control required">
+								<form:errors path="email" cssClass="validateError"/>
 							</div>
 							<div class="form-group">
 								<label class="control-label" for="userPassword">Password</label>
 								<input id="userPassword" name="userPassword" type="password" maxlength="25" class="form-control required" placeholder="at least 6 characters">
+								<form:errors path="userPassword" cssClass="validateError"/>
 							</div>
 							<div class="form-group">
 								<label class="control-label" for="userPasswordagain">Password again</label>
 								<input id="userPasswordagain" name="userPasswordagain" type="password" maxlength="25" class="form-control required">
+								<form:errors path="userPasswordagain" cssClass="validateError"/>
 							</div>
 							<div class="form-group">
 								<button id="signupSubmit" type="button" class="btn btn-primary btn-block">Create your account</button>
@@ -51,7 +52,7 @@
 							<div class="form-group">
 								By creating an account, you agree to our <span style="color: blue;">Terms of Use</span> and our <span style="color: blue;">Privacy Policy</span>
 							</div>
-						</form>
+						</form:form>
 					</div>
 					<div class="panel-footer">
 						<p>Already have an account? <a href="/userMangement/login">Sign in</a></p>

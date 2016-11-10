@@ -4,36 +4,37 @@
 // 	    });
 $("#signupSubmit").click(function(){
 	$("form :input").each(function(){
-		fouseOut(this);
+//		fouseOut(this);
 	});
 	
-	var $from = $("#registrationForm");
+	var $form = $("#registrationForm");
 	if ($(".onError").length > 0) {
 		return;
 	} else {
-		var o = formToJson($from);
-		var action = "/userMangement/createuser";
-		jQuery.ajax({
-			url: action,
-			type: "post",
-			data: JSON.stringify(o),
-			dataType: "json",
-			contentType: "application/json; charset=utf-8",
-	    	beforeSend: function () {
-	    		$("#alert_wait").show();
-	    	},
-	    	complete: function () {
-	    		$("#alert_wait").hide();
-	    	},
-	    	success: function(data){
-	    		
-	    	},
-	    	error:function(data) {
-//	    		var errorMsg = $(data.responseText).find(".error").html();
-//	    		$("#errorMsg").show();
-//	    		$("#errorMsg").append('<span style="color:#ff6600">' + errorMsg + '</span>');
-	    	}
-		});
+//		var o = formToJson($from);
+//		var action = "/userMangement/createuser";
+//		jQuery.ajax({
+//			url: action,
+//			type: "post",
+//			data: JSON.stringify(o),
+//			dataType: "json",
+//			contentType: "application/json; charset=utf-8",
+//	    	beforeSend: function () {
+//	    		$("#alert_wait").show();
+//	    	},
+//	    	complete: function () {
+//	    		$("#alert_wait").hide();
+//	    	},
+//	    	success: function(data){
+//	    		
+//	    	},
+//	    	error:function(data) {
+////	    		var errorMsg = $(data.responseText).find(".error").html();
+////	    		$("#errorMsg").show();
+////	    		$("#errorMsg").append('<span style="color:#ff6600">' + errorMsg + '</span>');
+//	    	}
+//		});
+		$form.submit();
 	}
 });
 
@@ -43,6 +44,7 @@ $("form :input").blur(function(){
 
 function fouseOut(obj) {
 	var $parent = $(obj).parent();
+	$parent.find(".validateError").remove();
 	$parent.find(".msg").remove();
 	$parent.find(".high").remove();
 	$(obj).removeAttr("style");

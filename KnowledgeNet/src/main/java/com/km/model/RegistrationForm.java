@@ -2,20 +2,20 @@ package com.km.model;
 
 import java.io.Serializable;
 
-import org.hibernate.validator.constraints.NotEmpty;
+import org.hibernate.validator.constraints.NotBlank;
 
 public class RegistrationForm implements Serializable{
 	private static final long serialVersionUID = 1L;
-	@NotEmpty
+	@NotBlank
 	private String userName;
 	
-	@NotEmpty
+	@NotBlank
 	private String userPassword;
 	
-	@NotEmpty
+	@NotBlank
 	private String email;
 	
-	@NotEmpty
+	@NotBlank
 	private String userPasswordagain;
 
 	/**

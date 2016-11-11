@@ -40,8 +40,7 @@ public class KM_LoginController {
 //	}
 	
 	@RequestMapping(value = "createuser", method = RequestMethod.POST)
-	public String createUser(@ModelAttribute(value="registrationForm") @Valid RegistrationForm registrationForm,
-			BindingResult result,
+	public String createUser(@ModelAttribute(value="registrationForm") @Validated RegistrationForm registrationForm,BindingResult result,
 			HttpServletRequest request, Model model) {
 		if (result.hasErrors()) {
 			return "registration";

@@ -1,3 +1,5 @@
+<%@ page language="java" contentType="text/html; charset=utf-8"%>
+
 <%@ page session="false"%>
 <%@ taglib prefix="spring" uri="http://www.springframework.org/tags"%>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
@@ -47,7 +49,7 @@
 								<form:errors path="userPasswordagain" cssClass="validateError"/>
 							</div>
 							<div class="form-group">
-								<button id="signupSubmit" type="button" class="btn btn-primary btn-block">Create your account</button>
+								<button id="signupSubmit" type="submit" class="btn btn-primary btn-block">Create your account</button>
 							</div>
 							<div class="form-group">
 								By creating an account, you agree to our <span style="color: blue;">Terms of Use</span> and our <span style="color: blue;">Privacy Policy</span>
